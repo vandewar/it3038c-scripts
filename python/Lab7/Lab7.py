@@ -28,8 +28,8 @@ r5 = barnE.rotate(225)
 r6 = barnE.rotate(270)
 r7 = barnE.rotate(315)
 
-r0.save("barnSpin.gif", save_all=True, append_images=[r1, r2, r3, r4, r5, r6, r7], duration = 50, loop = 0)
 spinPath = fileDir + "\\barnSpin.gif"
+r0.save(spinPath, save_all=True, append_images=[r1, r2, r3, r4, r5, r6, r7], duration = 50, loop = 0)
 spin = Image.open(spinPath)
 
 print('GIFs will only open as still images when opened through PIL')

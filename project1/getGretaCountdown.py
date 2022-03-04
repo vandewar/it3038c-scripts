@@ -1,5 +1,8 @@
 import time
 import math
+from PIL import Image, ImageDraw, ImageFont
+
+#Math---------------------------------------------------------------------------
 
 #declare variable for the concert start time at 7PM on March 29 and convert to a float
 concertStart = time.strptime("29 Mar 22 19", "%d %b %y %H")
@@ -25,4 +28,14 @@ minDiff = (timeDiff-((diffHourInt*3600)+(diffDayInt*86400)))/60
 diffMinInt = math.floor(minDiff)
 
 #print output to console
-print("The Greta Van Fleet concert at US Bank Arena starts in " + str(diffDayInt) + " days, " + str(diffHourInt) + " hours, and " + str(diffMinInt) + " minutes.")
+Output = "The Greta Van Fleet concert at US Bank Arena starts in " + str(diffDayInt) + " days, " + str(diffHourInt) + " hours, and " + str(diffMinInt) + " minutes."
+
+#Pic------------------------------------------------------------------------------
+
+bg = Image.open("./gvf.jpg")
+text = Image.new("RGB", (100, 100), "red")
+d = ImageDraw.Draw(text)
+d.text((100,100), "text", fill="black", anchor="ms")
+
+outfile = "./text.jpg"
+text.save(outfile, "JPEG")

@@ -30,12 +30,4 @@ diffMinInt = math.floor(minDiff)
 #print output to console
 Output = "The Greta Van Fleet concert at US Bank Arena starts in " + str(diffDayInt) + " days, " + str(diffHourInt) + " hours, and " + str(diffMinInt) + " minutes."
 
-#Pic------------------------------------------------------------------------------
-
-bg = Image.open("./gvf.jpg")
-text = Image.new("RGB", (100, 100), "red")
-d = ImageDraw.Draw(text)
-d.text((100,100), "text", fill="black", anchor="ms")
-
-outfile = "./text.jpg"
-text.save(outfile, "JPEG")
+print(Output)

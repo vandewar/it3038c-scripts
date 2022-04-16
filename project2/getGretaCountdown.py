@@ -8,7 +8,7 @@ import random
 #Math---------------------------------------------------------------------------
 
 #declare variable for the concert start time at 7PM on March 29 and convert to a float
-concertStart = time.strptime("29 Mar 22 19", "%d %b %y %H")
+concertStart = time.strptime("30 Jul 22 19", "%d %b %y %H")
 concertStartDec = time.mktime(concertStart)
 
 #find current time and convert to a float

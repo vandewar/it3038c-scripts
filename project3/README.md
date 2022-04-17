@@ -12,6 +12,6 @@ All dependencies should be included in the Project 3 folder, so once it is downl
 run web.py using powershell. Then navigate to localhost:5000 to access the project. <br><br>
 
 TROUBLESHOOTING:<br>
-I found that I was having issues when trying to run the project using a virtual environment<br>
-but running it just through plain powershell worked. Also confirm that flask is installed<br>
+The relative paths that were used for file referenceing will only work correctly if<br>
+web.py is called from within the project3 directory. Also confirm that flask is installed<br>
 to ensure all dependencies are met.
